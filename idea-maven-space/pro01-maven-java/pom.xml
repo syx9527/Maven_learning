@@ -1,0 +1,56 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	
+	<!-- 当前Maven工程的坐标 -->
+	<groupId>com.shaoyx.maven</groupId>
+	<artifactId>pro01-maven-java</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	
+	<!-- 当前Maven工程的打包方式，可选值有下面三种： -->
+	<!-- jar：表示这个工程是一个Java工程  -->
+	<!-- war：表示这个工程是一个Web工程 -->
+	<!-- pom：表示这个工程是“管理其他工程”的工程 -->
+	<packaging>jar</packaging>
+	
+	<name>pro01-maven-java</name>
+	<url>http://maven.apache.org</url>
+	
+	<properties>
+		<!-- 工程构建过程中读取源码时使用的字符集 -->
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+	</properties>
+	
+	<!-- 当前工程所依赖的jar包 -->
+	<dependencies>
+		<!-- 使用dependency配置一个具体的依赖 -->
+		
+		<!--<dependency>-->
+		<!--	<groupId>junit</groupId>-->
+		<!--	<artifactId>junit</artifactId>-->
+		<!--	<version>RELEASE</version>-->
+		<!--	<scope>test</scope>-->
+		<!--</dependency>-->
+		<dependency>
+			<groupId>org.junit.jupiter</groupId>
+			<artifactId>junit-jupiter</artifactId>
+			<version>RELEASE</version>
+			<scope>test</scope>
+		</dependency>
+		
+		<!-- https://mvnrepository.com/artifact/org.springframework/spring-core -->
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-core</artifactId>
+			<version>5.2.22.RELEASE</version>
+		</dependency>
+		<dependency>
+			<groupId>org.springframework</groupId>
+			<artifactId>spring-context</artifactId>
+			<version>5.2.22.RELEASE</version>
+		</dependency>
+	
+	</dependencies>
+
+</project>

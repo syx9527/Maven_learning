@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/xsd/maven-4.0.0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	
+	<groupId>com.shaoyx.maven</groupId>
+	<artifactId>pro03-maven-parent</artifactId>
+	<version>1.0-SNAPSHOT</version>
+	<!--当前工程作为父工程，要去管理其他工程，打包方式必须是pom-->
+	<packaging>pom</packaging>
+	<name>pro03-maven-parent</name>
+	<url>http://maven.apache.org</url>
+	
+	
+	<!-- 通过自定义属性，统一指定Spring的版本 -->
+	<properties>
+		<project.build.sourceEncoding>UTF-8</project.build.sourceEncoding>
+		<!-- 自定义标签，维护Spring版本数据 -->
+		<shaoyx.spring.version>5.2.22.RELEASE</shaoyx.spring.version>
+	
+	</properties>
+	
+	<!--子工程目录-->
+	<modules>
+		<!--<module>pro04-maven-parent</module>-->
+		<!--<module>pro05-maven-parent</module>-->
+		<!--<module>pro06-maven-parent</module>-->
+		<module>pro04-maven-parent</module>
+		<module>pro05-maven-parent</module>
+		<module>pro06-maven-parent</module>
+	</modules>
+	
+	<!-- 使用dependencyManagement标签配置对依赖的管理 -->
+	<!-- 被管理的依赖并没有真正被引入到工程 -->
+	<dependencyManagement>
+		<dependencies>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-core</artifactId>
+				<version>${shaoyx.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-beans</artifactId>
+				<version>${shaoyx.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-context</artifactId>
+				<version>${shaoyx.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-expression</artifactId>
+				<version>${shaoyx.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework</groupId>
+				<artifactId>spring-aop</artifactId>
+				<version>${shaoyx.spring.version}</version>
+			</dependency>
+			<dependency>
+				<groupId>org.junit.jupiter</groupId>
+				<artifactId>junit-jupiter-api</artifactId>
+				<version>5.8.2</version>
+				<scope>test</scope>
+			</dependency>
+		</dependencies>
+	</dependencyManagement>
+
+
+</project>
